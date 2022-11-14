@@ -1,0 +1,11 @@
+{
+    "home": "home",
+    "about": "home/about",
+    "shop": "home/shop",
+    "us": "home/about/us",
+    "faq": "home/about/faq",
+    "contact": "home/about/contact",
+    "t-shirts": "home/shop/t-shirts",
+    "pants": "home/shop/pants",
+    "jackets": "home/shop/jackets"
+}
