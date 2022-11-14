@@ -11,18 +11,28 @@ import Shop from './pages/Shop';
 import Tshirt from './pages/Tshirt';
 
 const App = () => {
-  const [currentLocation, setCurrentLocation] = useState(['shop'])
+  const [currentLocation, setCurrentLocation] = useState(['home'])
 
   const goBackHandler = () => {
-
+    const newArr = [...currentLocation]
+    newArr.splice(newArr.length - 1, 1)
+    setCurrentLocation(newArr)
   }
 
   const locationClickHandler = (location: string) => {
-
+    const index = currentLocation.indexOf(location)
+    console.log(location)
+    if(index > -1) {
+      const newArr = [...currentLocation]
+      newArr.length = index + 1
+      setCurrentLocation(newArr)
+    }
   }
 
   const openPageHandler = (page: string) => {
-    
+    const newArr = [...currentLocation]
+    newArr.push(page)
+    setCurrentLocation(newArr)
   }
 
   const getPageHandler = () => {

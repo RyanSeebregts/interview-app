@@ -7,15 +7,20 @@ interface OwnProps {
 }
 const LocationViewer = (props: OwnProps) => {
     const {
-        locations
+        locations,
+        locationClick,
+        goBackClick
     } = props
     return (
         <div style={{
             marginTop: '20px'
         }}>
-            <button style={{
-                cursor: 'pointer'
-            }}>
+            <button 
+                style={{
+                    cursor: 'pointer'
+                }}
+                onClick={goBackClick}
+            >
                 Go Back
             </button>
             <div style={{
@@ -29,9 +34,12 @@ const LocationViewer = (props: OwnProps) => {
                                 key !== 0 &&
                                     '/ '
                             }
-                            <div style={{
-                                cursor: 'pointer'
-                            }}>
+                            <div 
+                                style={{
+                                    cursor: 'pointer'
+                                }}
+                                onClick={() => locationClick(prop)}
+                            >
                                 {`${prop} `}
                             </div>
                         </React.Fragment>

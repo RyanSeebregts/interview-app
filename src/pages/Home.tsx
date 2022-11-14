@@ -16,8 +16,8 @@ const Home = (props: OwnProps) => {
             <div style={{
                 marginTop: '50px',
             }}>
-                    <Button title="About" clickHandler={() => openPage('about')} />
-                    <Button title="Shop" clickHandler={() => openPage('shop')} />
+                    <Button marginTop="10px" title="About" clickHandler={() => openPage('about')} />
+                    <Button marginTop="10px" title="Shop" clickHandler={() => openPage('shop')} />
             </div>
         </div>
     );
